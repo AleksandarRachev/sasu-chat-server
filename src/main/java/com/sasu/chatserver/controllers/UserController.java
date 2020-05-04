@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/users")
 @CrossOrigin("*")
@@ -22,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<UserLoginResponse> register(@RequestBody UserRegisterRequest userRegisterRequest){
+    public ResponseEntity<UserLoginResponse> register(@Valid @RequestBody UserRegisterRequest userRegisterRequest){
         return ResponseEntity.ok(userService.register(userRegisterRequest));
     }
 

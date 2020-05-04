@@ -27,6 +27,7 @@ public class UserService {
     private static final String PASSWORDS_NOT_MATCHING = "Passwords not matching";
     private static final String WRONG_CREDENTIALS = "Wrong credentials";
     private static final String USER_NOT_FOUND = "User not found";
+    private static final String INVALID_FIELDS = "Some of the fields are empty!";
 
     private final UserRepository userRepository;
 
